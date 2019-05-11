@@ -1,5 +1,8 @@
 const express = require("express");
+const myLog = require("./lib/md-lib").myLog;
 const app = express();
+
+app.use(myLog);
 
 app.get("/", function(req, res, next){
   res.send('Hello World');
